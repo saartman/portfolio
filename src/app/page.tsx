@@ -11,10 +11,9 @@ import ContactsBlock from "@/components/ContactsBlock";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start w-full max-w-3xl">
+      <main className="items-center w-full">
         <AboutSection />
-        <section id="projects" className="min-h-[80vh] flex flex-col justify-center w-full mb-24">
+        {/* <section id="projects" className="min-h-[80vh] flex flex-col justify-center w-full mb-24">
           <h2 className="text-3xl font-bold mb-4">Проекты</h2>
           <UnionBlock />
           <JiranicBlock />
@@ -22,8 +21,7 @@ export default function Home() {
           <UIKitVisualBlock />
         </section>
         <SkillsBlock />
-        <ContactsBlock />
+        <ContactsBlock />*/}
       </main>
-    </div>
   );
 }
