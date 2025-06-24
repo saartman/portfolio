@@ -1,17 +1,20 @@
 'use client';
 import React from "react";
 
+// Описание props для цветной кнопки
 interface BtnColoredProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  children: React.ReactNode;
-  textClassName?: string;
+  children: React.ReactNode; // содержимое кнопки
+  textClassName?: string;    // дополнительные классы для текста
 }
 
+// Кастомная кнопка с цветным фоном и анимацией
 export const BtnColored = React.forwardRef<HTMLButtonElement, BtnColoredProps>(
   (
     { children, className = '', type = 'button', disabled = false, textClassName = '', ...props },
     ref
   ) => {
     return (
+      // Кнопка с кастомными стилями и поддержкой ref
       <button
         ref={ref}
         type={type}
@@ -28,7 +31,9 @@ export const BtnColored = React.forwardRef<HTMLButtonElement, BtnColoredProps>(
         `}
         {...props}
       >
+        {/* Внутренний контейнер для декоративного прямоугольника */}
         <div className="self-stretch pl-5 pr-3.5 flex flex-col justify-start items-start gap-2.5">
+        {/* Декоративный прямоугольник, меняющий цвет при hover/active/disabled */}
         <div
           className={`
             self-stretch h-6 p-2.5 bg-pink-600/10 rounded-[90px]
@@ -42,6 +47,7 @@ export const BtnColored = React.forwardRef<HTMLButtonElement, BtnColoredProps>(
           aria-hidden="true"
         />
         </div>
+        {/* Текст кнопки */}
         <span className={`justify-start text-black text-4xl font-bold font-['Manrope'] ${textClassName}`}>
           {children}
         </span>

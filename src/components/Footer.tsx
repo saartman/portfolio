@@ -1,11 +1,14 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+// Футер сайта с контактами и навигацией
 export const Footer = () => {
   return (
     <footer className="bg-gray-50">
       <div className="container mx-auto px-4 py-12">
+        {/* Основная сетка футера */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* Логотип и краткое описание */}
           <div>
             <Image
               src="/logo/logo1.svg"
@@ -18,7 +21,7 @@ export const Footer = () => {
               Создаю современные веб-приложения с использованием передовых технологий.
             </p>
           </div>
-          
+          {/* Навигация по сайту */}
           <div>
             <h3 className="font-bold mb-4">Навигация</h3>
             <ul className="space-y-2">
@@ -39,7 +42,7 @@ export const Footer = () => {
               </li>
             </ul>
           </div>
-          
+          {/* Контактная информация */}
           <div>
             <h3 className="font-bold mb-4">Контакты</h3>
             <ul className="space-y-2">
@@ -61,7 +64,7 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
-        
+        {/* Копирайт */}
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
           <p>&copy; {new Date().getFullYear()} Все права защищены</p>
         </div>
