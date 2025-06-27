@@ -26,8 +26,8 @@ const manrope = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "Портфолио | Ваше Имя",
-  description: "Персональное портфолио разработчика",
+  title: "Gleb Fedorov",
+  description: "Creator's Personal Website",
 };
 
 export default function RootLayout({

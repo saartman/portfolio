@@ -1,12 +1,16 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
-// Футер сайта с контактами и навигацией
+/**
+ * Компонент Footer — футер сайта с контактами, навигацией и копирайтом.
+ * Содержит три колонки: логотип и описание, навигация по сайту, контактная информация.
+ * Внизу отображается копирайт с текущим годом.
+ */
 export const Footer = () => {
   return (
     <footer className="bg-gray-50">
       <div className="container mx-auto px-4 py-12">
-        {/* Основная сетка футера */}
+        {/* Основная сетка футера (3 колонки) */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Логотип и краткое описание */}
           <div>
@@ -64,7 +68,7 @@ export const Footer = () => {
             </ul>
           </div>
         </div>
-        {/* Копирайт */}
+        {/* Копирайт (нижняя строка) */}
         <div className="border-t border-gray-200 mt-8 pt-8 text-center text-gray-600">
           <p>&copy; {new Date().getFullYear()} Все права защищены</p>
         </div>

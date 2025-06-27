@@ -1,7 +1,7 @@
 'use client';
 import React from "react";
 
-// Цвета для кнопки
+// Карта цветов для разных вариантов кнопки
 const colorMap = {
   roze: {
     base: 'bg-[rgba(236,0,140,0.1)]',
@@ -15,20 +15,30 @@ const colorMap = {
   },
   green: {
     base: 'bg-[rgba(97,206,13,0.1)]',
-    hover: 'hover:bg-[rgba(97,206,13,0.2)]',
+    hover: 'hover:bg-[97,206,13,0.2)]',
     text: 'text-black',
   },
 };
 
+// Типы для пропсов цвета и варианта
 type BtnColoredColor = keyof typeof colorMap;
 type BtnColoredVariant = 'default' | 'active';
 
+// Пропсы для компонента BtnColored
 interface BtnColoredProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  /** Цвет кнопки (roze, blue, green) */
   color?: BtnColoredColor;
+  /** Вариант отображения (default — полупрозрачная, active — яркая) */
   variant?: BtnColoredVariant;
+  /** Контент кнопки */
   children: React.ReactNode;
 }
 
+/**
+ * Компонент BtnColored — кастомная кнопка с цветным фоном и декоративным прямоугольником.
+ * Используется для выделения ролей/категорий (например, в AboutSection).
+ * Поддерживает разные цвета, варианты (active/default), состояния (disabled).
+ */
 export const BtnColored = React.forwardRef<HTMLButtonElement, BtnColoredProps>(
   (
     {
@@ -72,7 +82,7 @@ export const BtnColored = React.forwardRef<HTMLButtonElement, BtnColoredProps>(
         >
           {children}
         </span>
-        {/* Декоративный прямоугольник */}
+        {/* Декоративный прямоугольник (фон кнопки) */}
         <div className="order-1 relative shrink-0 w-full">
           <div className="relative w-full">
             <div className="flex flex-col gap-2.5 items-start justify-start pl-5 pr-[15px] py-0 w-full">
@@ -93,4 +103,5 @@ export const BtnColored = React.forwardRef<HTMLButtonElement, BtnColoredProps>(
     );
   }
 );
+// Имя компонента для React DevTools
 BtnColored.displayName = "BtnColored";
