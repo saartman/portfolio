@@ -9,8 +9,8 @@ import Logo from '@/assets/logo/logo1.svg';
  */
 export const Header = () => {
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 h-[100px] bg-black mix-blend-exclusion flex items-center">
-      <div className="flex w-full items-center justify-between mx-[25px] h-full">
+    <header className="fixed top-0 left-0 right-0 flex flex-1 flex-grow items-center h-[100px] w-full max-w-screen bg-black mix-blend-exclusion px-[1.5vw]">
+      <div className="flex w-full items-center justify-between h-full">
         {/* Мобильное меню (отображается только на мобильных) */}
         <button className="md:hidden p-2">
           {/* Иконка бургер-меню */}
@@ -19,14 +19,14 @@ export const Header = () => {
           </svg>
         </button>
         {/* Навигация по секциям сайта (отображается на десктопе) */}
-        <nav className="hidden md:flex gap-8 items-center">
+        <nav className="hidden md:flex items-center">
           <a href="#about" className="text-white hover:text-gray-700 font-extrabold text-[35px]">ОБО МНЕ。</a>
           <a href="#projects" className="text-white hover:text-gray-700 font-extrabold text-[35px]">ПРОЕКТЫ。</a>
           <a href="#contact" className="text-white hover:text-gray-700 font-extrabold text-[35px]">КОНТАКТЫ。</a>
         </nav>
         {/* Логотип сайта (слева) */}
         <Link href="/" className="flex items-center h-full p-2">
-          <Logo className="h-full w-auto text-white" />
+          <Logo className="h-full text-white" />
         </Link>
       </div>
     </header>
