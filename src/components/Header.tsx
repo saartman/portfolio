@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '@/assets/logo/logo1.svg';
+import { MenuNavBtn } from '@/components/elements/menu_nav_btn';
 
 /**
  * Компонент Header — шапка сайта с навигацией и логотипом.
@@ -18,15 +19,20 @@ export const Header = () => {
             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
           </svg>
         </button>
-        {/* Навигация по секциям сайта (отображается на десктопе) */}
-        <nav className="hidden md:flex items-center">
+        {/* Навигация */}
+        <nav className="hidden md:flex gap-8 items-center">
+          {/* Старые пункты меню */}
           <a href="#about" className="text-white hover:text-gray-700 font-extrabold text-[35px]">ОБО МНЕ。</a>
           <a href="#projects" className="text-white hover:text-gray-700 font-extrabold text-[35px]">ПРОЕКТЫ。</a>
           <a href="#contact" className="text-white hover:text-gray-700 font-extrabold text-[35px]">КОНТАКТЫ。</a>
+          {/* Новые пункты меню на MenuNavBtn */}
+          <MenuNavBtn href="#about" active>ОБО МНЕ。</MenuNavBtn>
+          <MenuNavBtn href="#projects">ПРОЕКТЫ。</MenuNavBtn>
+          <MenuNavBtn href="#contact">КОНТАКТЫ。</MenuNavBtn>
         </nav>
-        {/* Логотип сайта (слева) */}
+        {/* Логотип */}
         <Link href="/" className="flex items-center h-full p-2">
-          <Logo className="h-full text-white" />
+          <Logo className="h-full w-auto text-white" />
         </Link>
       </div>
     </header>

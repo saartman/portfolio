@@ -23,7 +23,7 @@ export default function AboutSection() {
     <section className="flex flex-1 flex-grow flex-col w-full h-screen bg-white px-[1.5vw] gap-[2.5vw]">
       <div className="flex flex-1 flex-grow flex-col md:flex-row w-full h-full">
         {/* Левая часть: Имя и специализация */}
-        <div className="flex flex-1 flex-grow flex-col items-center w-full h-full">
+        <div className="flex flex-1 flex-grow flex-col items-center w-full h-full pb-[1vw]">
           <div className="flex flex-1 flex-grow flex-col items-center justify-center w-full h-full">
             <div
               className="flex items-center justify-center h-[20vh]"
@@ -52,7 +52,7 @@ export default function AboutSection() {
           <Separator orientation="vertical" className="w-full" />
         </div>*/}
         {/* Правая часть: Кто я? и кнопки */}
-        <div className="flex flex-col gap-10 px-[2.5vw] items-center justify-center md:items-start w-full">
+        <div className="flex flex-col gap-10 px-[2.5vw] pt-[5vw] items-center justify-center md:items-start w-full">
           <div className="flex flex-wrap gap-4 items-center justify-center md:justify-start w-full">
             <span className="font-manrope font-extrabold text-[35px] text-black text-center uppercase w-full ">Кто я? для</span>
             <div className="flex flex-row gap-2.5 w-full justify-center">
@@ -61,7 +61,7 @@ export default function AboutSection() {
               <BtnColored color="green" variant="default">Разработчиков</BtnColored>
             </div>
           </div>
-          <p className="font-manrope font-bold text-[2vw] text-black text-center md:text-left leading-tight w-full">
+          <p className="font-manrope font-bold text-[2.5vw] text-black text-center md:text-center leading-tight w-full">
             Я дизайнер интерфейсов, создающий удобные, эстетичные и эффективные цифровые продукты. Моя цель — находить баланс между бизнес-задачами и потребностями пользователей, превращая сложные процессы в интуитивно понятные интерфейсы.
           </p>
         </div>
