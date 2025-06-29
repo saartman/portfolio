@@ -23,7 +23,7 @@ export default function AboutSection() {
     <section className="flex flex-1 flex-grow flex-col w-full h-screen bg-white px-[1.5vw] gap-[2.5vw]">
       <div className="flex flex-1 flex-grow flex-col md:flex-row w-full h-full">
         {/* Левая часть: Имя и специализация */}
-        <div className="flex flex-1 flex-grow flex-col items-center w-full h-full pb-[1vw]">
+        <div className="flex flex-1 flex-grow flex-col items-center w-full h-full pb-[1vw] pt-[4vw]">
           <div className="flex flex-1 flex-grow flex-col items-center justify-center w-full h-full">
             <div
               className="flex items-center justify-center h-[20vh]"
@@ -45,7 +45,7 @@ export default function AboutSection() {
           <h1 className="font-['Montserrat_Alternates'] font-bold text-[7vw] leading-none tracking-[-0.05em] uppercase text-black w-full max-h-[300px]">
             ҐлҼҔ <br /> ФӚдҨрӨв
           </h1>
-          <span className="font-manrope font-extrabold text-[54px] uppercase text-black leading-[1.3] w-full">Дизайн</span>
+          <span className="font-manrope font-extrabold text-[2.5vw] uppercase text-black leading-[1.3] w-full">Дизайн</span>
         </div>
         {/* Вертикальный separator */}
         {/*<div className="hidden md:flex w-full">

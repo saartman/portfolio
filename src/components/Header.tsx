@@ -20,7 +20,7 @@ export const Header = () => {
           </svg>
         </button>
         {/* Навигация */}
-        <nav className="hidden md:flex gap-8 items-center">
+        <nav className="hidden md:flex items-center">
           {/* Старые пункты меню */}
           <a href="#about" className="text-white hover:text-gray-700 font-extrabold text-[35px]">ОБО МНЕ。</a>
           <a href="#projects" className="text-white hover:text-gray-700 font-extrabold text-[35px]">ПРОЕКТЫ。</a>
